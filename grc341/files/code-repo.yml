@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Creates a CodeCommit repository'
+
+Parameters:
+  RepoName:
+    Description: Provide a name for your repository
+    Type: String
+
+Resources:
+  CodeRepo:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      RepositoryDescription: Repo for reInforce demo
+      RepositoryName:
+        Ref: RepoName
+
+Outputs:
+  CloneUrlSsh:
+    Description: url for cloning repo over ssh
+    Value: !GetAtt CodeRepo.CloneUrlSsh
+    Export:
+      Name: CloneUrlSsh
+
+  CloneUrlHttp:
+    Description: url for cloning repo over https
+    Value: !GetAtt CodeRepo.CloneUrlHttp
+    Export:
+      Name: CloneUrlHttp
+
+  RepoArn:
+    Description: Arn of the repo
+    Value: !GetAtt CodeRepo.Arn
+    Export:
+      Name: RepoArn
