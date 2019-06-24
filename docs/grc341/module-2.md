@@ -29,10 +29,6 @@ In this module we will create S3 buckets to store build artifacts and logs. We w
 
     [us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-loggingbucket&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/logging_bucket.yml)
 
-2. **Click** on the link below to launch the cloudformation template
-
-    [us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-loggingbucket-policy&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/bucket-policy.yml)
-
 ## Create KMS Key for encryption
 
 1. **Click** on the link below to launch the cloudformation template
