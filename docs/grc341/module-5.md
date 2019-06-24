@@ -12,3 +12,7 @@ In this module we will create an SSM Association to run the Ansible playbook on 
 2. **Click** on the link below to launch the cloudformation template
 
     [us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-ssm&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/ssm.yml)
+
+3. The playbook url will be similar to:
+
+        s3://YOUR_ARTIFACTS_BUCKET/cis-rhel-ansible-master/Ansible-RHEL7-CIS-Benchmarks-master/playbook.yml
