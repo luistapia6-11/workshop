@@ -6,13 +6,16 @@ In this module we will create an SSM Association to run the Ansible playbook on 
 1. Ensure you are logged into an AWS account with admin access
 2. AWS CLI set up on the local client.
 
-## Setting up the SSM Association
+## Setting up the Systems Manager State Manager Association
 
-1. Login to the AWS management console
-2. **Click** on the link below to launch the cloudformation template
+Here we will create a [Systems Manager State Manager](https://aws.amazon.com/systems-manager/) association using the RunAnsiblePlaybook document. Systems Manager will reference the artifacts bucket created earlier to run the Ansible playbook. In this template we scheduled the association to run the playbook every 30 mins. This could be customized to meet your needs.
+
+1. **Click** on the link below to launch the cloudformation template
 
     [us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-ssm&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/ssm.yml)
 
 3. The playbook url will be similar to:
 
         s3://YOUR_ARTIFACTS_BUCKET/cis-rhel-ansible-master/Ansible-RHEL7-CIS-Benchmarks-master/playbook.yml
+
+![Systems Manager State Manager Association](./images/ssm.PNG)

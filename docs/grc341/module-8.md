@@ -19,3 +19,7 @@ In this module we will create the pipeline to autoomate the deployment of the An
 8. For ```Application name``` select the application created in module-4 from the drop down
 9. For ```Deployment group``` select the deployment group created in module-4 from the drop down
 10. Review and create pipeline
+
+Your pipeline should look similar to the below pipeline.
+
+![Pipeline](./images/pipeline.PNG)

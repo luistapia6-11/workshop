@@ -1,5 +1,5 @@
 # Objective
-In this module we will create a CodeCommit repository to store our Ansible playbook and supporting files. We will also download the workshop artifacts that contain the Ansible playbook and copy them to our local repository While this should work in any commercial region, it was tested specifically in US-East-1.
+In this module we will create a [CodeCommit](https://aws.amazon.com/codecommit/) repository to store our [Ansible](https://www.ansible.com/) playbook and supporting files. We will also download the workshop artifacts that contain the Ansible playbook and copy them to our local repository While this should work in any commercial region, it was tested specifically in US-East-1.
 
 ## Prerequisites
 
@@ -7,11 +7,15 @@ In this module we will create a CodeCommit repository to store our Ansible playb
 2. AWS CLI set up on the local client.
 
 ## Create CodeCommit repository
+We need to create a code repository to store our [Ansible](https://www.ansible.com/) playbook and supporting files. This will allow us to track changes to our playbook so that we can easily revert to a known working version if a change breaks a system. This will also integrate with [CodePipeline](https://aws.amazon.com/codepipeline/) in a later step to trigger our pipeline.
 
-1. Login to the AWS management console
-2. **Click** on the link below to launch the cloudformation template
+1. **Click** on the link below to launch the cloudformation template
 
     [us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-coderepository&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/code-repo.yml)
+
+2. Name your repository
+
+![Repo Name](./images/repo-name.PNG)
 
 ## Create IAM user
 
