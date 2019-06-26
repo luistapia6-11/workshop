@@ -540,18 +540,18 @@
                 
                 
                 <h1 id="objective">Objective</h1>
-<p>In this module we will create <a href="https://aws.amazon.com/s3/">S3</a> buckets to store build artifacts and logs. We will also create an encryption key that will be used to encrypt data at rest. Lastly, we will create an <a href="https://aws.amazon.com/iam/">IAM</a> role that will give our <a href="https://aws.amazon.com/ec2/">EC2</a> instance permissions for <a href="https://aws.amazon.com/systems-manager/">Systems Manager</a>. While this should work in any commercial region, it was tested specifically in US-East-1.</p>
+<p>In this module we will create <a href="https://aws.amazon.com/s3/" target="_blank">S3</a> buckets to store build artifacts and logs. We will also create an encryption key that will be used to encrypt data at rest. Lastly, we will create an <a href="https://aws.amazon.com/iam/" target="_blank">IAM</a> role that will give our <a href="https://aws.amazon.com/ec2/" target="_blank">EC2</a> instance permissions for <a href="https://aws.amazon.com/systems-manager/" target="_blank">AWS Systems Manager</a>. While this should work in any commercial region, it was tested specifically in US-East-1.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li>Ensure you are logged into an AWS account with admin access</li>
 <li>AWS CLI set up on the local client.</li>
 </ol>
 <h2 id="create-iam-role">Create IAM role</h2>
-<p>We need to create a role for our instance so that it can download the <a href="https://www.ansible.com/">Ansible</a> playbook from our artifacts bucket later.</p>
+<p>We need to create a role for our instance so that it can download the <a href="https://www.ansible.com/" target="_blank">Ansible</a> playbook from our artifacts bucket later.</p>
 <ol>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
-<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-instance-role&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/instance-role.yml">us-east-1</a></p>
+<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-instance-role&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/instance-role.yml" target="_blank">us-east-1</a></p>
 </li>
 <li>
 <p>Provide a name for your role</p>
@@ -559,12 +559,12 @@
 </ol>
 <p><img alt="Role Name" src="images/role-name.PNG" /></p>
 <h2 id="setting-up-s3-bucket-for-build-artifacts">Setting up S3 bucket for build artifacts</h2>
-<p>We will create an <a href="https://aws.amazon.com/s3/">S3</a> bucket to store our artifacts. This will be used by <a href="https://aws.amazon.com/codebuild/">CodeBuild</a> to store our build artifacts. The instance will reference this bucket later to download the <a href="https://www.ansible.com/">Ansible</a> playbook. Make sure to fill in all of the parameters.</p>
+<p>We will create an <a href="https://aws.amazon.com/s3/" target="_blank">S3</a> bucket to store our artifacts. This will be used by <a href="https://aws.amazon.com/codebuild/" target="_blank">AWS CodeBuild</a> to store our build artifacts. The instance will reference this bucket later to download the <a href="https://www.ansible.com/" target="_blank">Ansible</a> playbook. Make sure to fill in all of the parameters.</p>
 <p><strong>NOTE</strong>: <em>S3 bucket names are globally unique. If you get an error that a bucket already exists try a new name</em></p>
 <ol>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
-<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-artifactbucket&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/artifact_bucket.yml">us-east-1</a></p>
+<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-artifactbucket&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/artifact_bucket.yml" target="_blank">us-east-1</a></p>
 </li>
 </ol>
 <p><img alt="Artifacts Bucket" src="images/artifacts-bucket.PNG" /></p>
@@ -572,7 +572,7 @@
 <ol>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
-<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-artifactbucket-policy&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/bucket-policy.yml">us-east-1</a></p>
+<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-artifactbucket-policy&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/bucket-policy.yml" target="_blank">us-east-1</a></p>
 </li>
 </ol>
 <p><img alt="Artifacts Bucket Policy" src="images/artifacts-policy.PNG" /></p>
@@ -582,7 +582,7 @@
 <ol>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
-<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-loggingbucket&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/logging_bucket.yml">us-east-1</a></p>
+<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-loggingbucket&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/logging_bucket.yml" target="_blank">us-east-1</a></p>
 </li>
 </ol>
 <p><img alt="Logging Bucket" src="images/logging-bucket.PNG" /></p>
@@ -591,7 +591,7 @@
 <ol>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
-<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-encryption-key&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/encryption.yml">us-east-1</a></p>
+<p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-encryption-key&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/encryption.yml" target="_blank">us-east-1</a></p>
 </li>
 </ol>
 <p><img alt="KMS Key" src="images/kms.PNG" /></p>
