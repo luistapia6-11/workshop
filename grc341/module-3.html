@@ -498,20 +498,21 @@
                 
                 
                 <h1 id="objective">Objective</h1>
-<p>In this module we will create a CodeBuild Project to copy our files from our repository to S3. This will allow us to refernece the playbook url in S3 in our SSM Association in a later step. While this should work in any commercial region, it was tested specifically in US-East-1.</p>
+<p>In this module we will create a <a href="https://aws.amazon.com/codebuild/">CodeBuild</a> Project to copy our files from our repository to S3. This will allow us to reference the playbook url in S3 in our Systems Manager State Manager association in a later step. While this should work in any commercial region, it was tested specifically in US-East-1.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li>Ensure you are logged into an AWS account with admin access</li>
 <li>AWS CLI set up on the local client.</li>
 </ol>
 <h2 id="setting-up-your-build-project">Setting up your build project</h2>
+<p>We will create a <a href="https://aws.amazon.com/codebuild/">CodeBuild</a> project that will take the code in our repository and create a zip file that CodeDeploy will use to deploy our <a href="https://www.ansible.com/">Ansible</a> playbook to our instances. Make sure to fill in all of the parameters.</p>
 <ol>
-<li>Login to the AWS management console</li>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
 <p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-build&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/build.yml">us-east-1</a></p>
 </li>
 </ol>
+<p><img alt="Build" src="images/build.PNG" /></p>
                 
                   
                 

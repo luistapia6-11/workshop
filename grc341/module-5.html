@@ -386,8 +386,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-ssm-association" title="Setting up the SSM Association" class="md-nav__link">
-    Setting up the SSM Association
+  <a href="#setting-up-the-systems-manager-state-manager-association" title="Setting up the Systems Manager State Manager Association" class="md-nav__link">
+    Setting up the Systems Manager State Manager Association
   </a>
   
 </li>
@@ -472,8 +472,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setting-up-the-ssm-association" title="Setting up the SSM Association" class="md-nav__link">
-    Setting up the SSM Association
+  <a href="#setting-up-the-systems-manager-state-manager-association" title="Setting up the Systems Manager State Manager Association" class="md-nav__link">
+    Setting up the Systems Manager State Manager Association
   </a>
   
 </li>
@@ -504,9 +504,9 @@
 <li>Ensure you are logged into an AWS account with admin access</li>
 <li>AWS CLI set up on the local client.</li>
 </ol>
-<h2 id="setting-up-the-ssm-association">Setting up the SSM Association</h2>
+<h2 id="setting-up-the-systems-manager-state-manager-association">Setting up the Systems Manager State Manager Association</h2>
+<p>Here we will create a <a href="https://aws.amazon.com/systems-manager/">Systems Manager State Manager</a> association using the RunAnsiblePlaybook document. Systems Manager will reference the artifacts bucket created earlier to run the Ansible playbook. In this template we scheduled the association to run the playbook every 30 mins. This could be customized to meet your needs.</p>
 <ol>
-<li>Login to the AWS management console</li>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
 <p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-ssm&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/ssm.yml">us-east-1</a></p>
@@ -517,6 +517,7 @@
 </code></pre>
 </li>
 </ol>
+<p><img alt="Systems Manager State Manager Association" src="images/ssm.PNG" /></p>
                 
                   
                 
