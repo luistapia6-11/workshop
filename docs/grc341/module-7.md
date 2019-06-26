@@ -10,7 +10,7 @@ In this module we will provision and configure our instance(s) to receive the fi
 
 ## Provision Red Hat Enterprise Linux 7 instance
 
-1. Navigate to the [marketplace](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:) and search for ```Linux 7```
+1. Navigate to the <a href="https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:" target="_blank">marketplace</a> and search for ```Linux 7```
 2. Select ```Red Hat Enterprise Linux (RHEL) 7 (HVM)```
 3. On ```Step 2: Choose an Instance Type``` select ```t2.micro```
 4. On ```Step 3: Configure Instance Details``` provision the instance in a subnet that you have access to

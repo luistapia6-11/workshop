@@ -1,5 +1,5 @@
 # Objective
-In this module we will create a [CodeCommit](https://aws.amazon.com/codecommit/) repository to store our [Ansible](https://www.ansible.com/) playbook and supporting files. We will also download the workshop artifacts that contain the Ansible playbook and copy them to our local repository While this should work in any commercial region, it was tested specifically in US-East-1.
+In this module we will create a <a href="https://aws.amazon.com/codecommit/" target="_blank">CodeCommit</a> repository to store our <a href="https://www.ansible.com/" target="_blank">Ansible</a> playbook and supporting files. We will also download the workshop artifacts that contain the Ansible playbook and copy them to our local repository While this should work in any commercial region, it was tested specifically in US-East-1.
 
 ## Prerequisites
 
@@ -7,11 +7,11 @@ In this module we will create a [CodeCommit](https://aws.amazon.com/codecommit/)
 2. AWS CLI set up on the local client.
 
 ## Create CodeCommit repository
-We need to create a code repository to store our [Ansible](https://www.ansible.com/) playbook and supporting files. This will allow us to track changes to our playbook so that we can easily revert to a known working version if a change breaks a system. This will also integrate with [CodePipeline](https://aws.amazon.com/codepipeline/) in a later step to trigger our pipeline.
+We need to create a code repository to store our <a href="https://www.ansible.com/" target="_blank">Ansible</a> playbook and supporting files. This will allow us to track changes to our playbook so that we can easily revert to a known working version if a change breaks a system. This will also integrate with <a href="https://aws.amazon.com/codepipeline/" target="_blank">AWS CodePipeline</a> in a later step to trigger our pipeline.
 
 1. **Click** on the link below to launch the cloudformation template
 
-    [us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-coderepository&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/code-repo.yml)
+    <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-coderepository&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/code-repo.yml" target="_blank">us-east-1</a>
 
 2. Name your repository
 
@@ -19,7 +19,7 @@ We need to create a code repository to store our [Ansible](https://www.ansible.c
 
 ## Create IAM user
 
-1. If you don't already have an IAM user, create one now from the [IAM console](https://console.aws.amazon.com/iam/home?region=us-east-1#/users)
+1. If you don't already have an IAM user, create one now from the <a href="https://console.aws.amazon.com/iam/home?region=us-east-1#/users" target="_blank">IAM console</a>
 
 2. Upload SSH public key or generate HTTPS credentials for your IAM user
 
