@@ -498,20 +498,21 @@
                 
                 
                 <h1 id="objective">Objective</h1>
-<p>In this module we will create a CodeDeploy application and deployment group. This will be used to deploy the Ansible playbook to our instance(s). While this should work in any commercial region, it was tested specifically in US-East-1.</p>
+<p>In this module we will create a <a href="https://aws.amazon.com/codedeploy/">CodeDeploy</a> application and deployment group. This will be used to deploy the Ansible playbook to our instance(s). While this should work in any commercial region, it was tested specifically in US-East-1.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li>Ensure you are logged into an AWS account with admin access</li>
 <li>AWS CLI set up on the local client.</li>
 </ol>
 <h2 id="setting-up-your-application-and-deployment-group">Setting up your application and deployment group</h2>
+<p>We will create a <a href="https://aws.amazon.com/codedeploy/">CodeDeploy</a> application and deployment group. The deployment group is used to define the target instances to deploy the artifacts to. Make sure to fill in all of the parameters.</p>
 <ol>
-<li>Login to the AWS management console</li>
 <li>
 <p><strong>Click</strong> on the link below to launch the cloudformation template</p>
 <p><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-deploy&amp;templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/deploy.yml">us-east-1</a></p>
 </li>
 </ol>
+<p><img alt="Application &amp; Deployment Group" src="images/app.PNG" /></p>
                 
                   
                 

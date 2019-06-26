@@ -47,11 +47,8 @@ We will now create an S3 bucket to store logs for troubleshooting purposes. If w
 
     [us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=reinforce-loggingbucket&templateURL=https://aws-reinforce-demo-grc341.s3.amazonaws.com/templates/logging_bucket.yml)
 
-<<<<<<< HEAD
 ![Logging Bucket](./images/logging-bucket.PNG)
 
-=======
->>>>>>> d0bb1bee0c857eb712726de6f38fecc7010c4d8a
 ## Create KMS Key for encryption
 
 Here we will create a KMS encryption key that will be used by CodeBuild to encrypt our build artifacts in S3. Make sure to replace ```user/$user``` with the name of the IAM user created earlier. 
